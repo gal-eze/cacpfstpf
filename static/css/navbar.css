@@ -1,0 +1,102 @@
+.topheader {
+  box-shadow: 0 4px 5px var(--navbar-shallow-color); /* sombra de la caja*/
+  position: fixed; /* queda fijado el header respecto al viewport*/
+  z-index: 100; /*es para que no se superpongan los hijos */
+  background-color: var(--theme-color); /* color del fondo del menu */
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.topnav {
+  display: flex; /*elementos en fila*/
+  justify-content: space-between; /* un espacio en el medio entre los elementos */
+  padding: 10px;
+  max-width: 980px; /* ahcho máximo del menú */
+  margin: 0 auto; /* centrado respecto al header */
+}
+
+/* Logo */
+.logo {
+  display: flex; /*elementos en fila*/
+  align-items: center; /* centrados en eje horizontal */
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--primary-color);
+}
+
+.logo img {
+  border-radius: 50%; /* rendondeo de la imagen */
+}
+
+/* Menu */
+.menu {
+  display: flex; /*elementos en fila*/
+  list-style: none; /* elimina los puntos de los li */
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  padding: 0 15px; /* separación de los elementos del menu */
+}
+
+.menu a {
+  color: var(--text-color); /* color del texto */
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 50px;
+  position: relative;
+}
+
+/*subraya la opción seleccionada en el menú */
+.menu a::after {
+  /* pseudo selector */
+  content: "";
+  background-color: var(--primary-color);
+  position: absolute;
+  left: 0;
+  top: calc(100% + 4px);
+  width: 100%;
+  height: 4px;
+
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.menu a.selected::after,
+.menu a:hover::after {
+  opacity: 0.8;
+}
+
+.menu a:hover {
+  color: var(--primary-color);
+}
+
+.open-menu,
+.close-menu {
+  display: none; /* para que no se vean en dispositivos NO móviles */
+}
+
+.logotype {
+  display: flex;
+  justify-content: right;
+  font-family: 'Bebas Neue', cursive;
+	font-weight: normal;
+	color: var(--primary-color);
+	font-size: 40px;
+}
+
+header .logotipo {
+	font-family: 'Bebas Neue', cursive;
+	font-weight: normal;
+	color: var(--rojo);
+	font-size: 40px;
+}
+
+header .logotipo {
+	font-family: 'Bebas Neue', cursive;
+	font-weight: normal;
+	color: var(--rojo);
+	font-size: 40px;
+}
